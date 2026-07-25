@@ -15,16 +15,16 @@ A distributed task assignment system implemented in Python using both TCP and UD
 
 ```
                 
-+--------+     TCP     +--------+
-| Client | <---------> | Server |
-+--------+             +--------+
-                             |
-                             | UDP
-                             |
-                             ▼
-                    +----------------+
-                    | Archive Server |
-                    +----------------+
++--------+   TCP   +--------+
+| Client | <-----> | Server |
++--------+         +--------+
+                       |
+                       | UDP
+                       |
+                       ▼
+              +----------------+
+              | Archive Server |
+              +----------------+
 ```
 
 ## Technologies
