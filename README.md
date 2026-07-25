@@ -18,7 +18,7 @@ A distributed task assignment system consisting of a TCP server, TCP client, and
 
 ---
 
-### 2. Guessing Game
+### 2. [Guessing Game](02-Guessing-Game)
 A multiplayer client-server guessing game using a custom binary communication protocol. Multiple clients connect to a TCP server and locate a randomly generated number using a binary search strategy.
 
 **Concepts**
@@ -30,7 +30,7 @@ A multiplayer client-server guessing game using a custom binary communication pr
 
 ---
 
-### 3. NetCopy File Transfer
+### 3. [NetCopy File Transfer](03-NetCopy-File-Transfer)
 A client-server file transfer application implementing reliable file transmission together with checksum verification to ensure data integrity.
 
 **Concepts**
@@ -41,7 +41,7 @@ A client-server file transfer application implementing reliable file transmissio
 
 ---
 
-### 4. Binary Protocols
+### 4. [Binary Protocols](04-Binary-Protocols)
 A collection of exercises demonstrating the design, serialization, parsing, and processing of custom binary network protocols.
 
 **Concepts**
@@ -52,7 +52,7 @@ A collection of exercises demonstrating the design, serialization, parsing, and 
 
 ---
 
-### 5. Circuit Allocation
+### 5. [Circuit Allocation](05-Circuit-Allocation)
 Simulation of circuit allocation algorithms used in computer networks to manage limited communication resources efficiently.
 
 **Concepts**
@@ -63,7 +63,7 @@ Simulation of circuit allocation algorithms used in computer networks to manage 
 
 ---
 
-### 6. Mininet Topology
+### 6. [Mininet Topology](06-Mininet-Topology)
 A custom virtual network topology built using Mininet, including multiple hosts, switches, and routers configured to simulate a realistic computer network.
 
 **Concepts**
