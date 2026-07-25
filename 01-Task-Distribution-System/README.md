@@ -21,7 +21,7 @@ A distributed task assignment system implemented in Python using both TCP and UD
                              |
                              | UDP
                              |
-                             v
+                             ▼
                       +---------------+
                       | Archive Server|
                       +---------------+
