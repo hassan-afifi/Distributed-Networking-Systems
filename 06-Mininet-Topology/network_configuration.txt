@@ -1,0 +1,35 @@
+r6 ip addr add 28.0.0.254/8 dev r6-eth0 broadcast 28.255.255.255
+r6 ip addr add 192.168.110.1/24 dev r6-eth1 broadcast 192.168.110.255
+r6 ip addr add 38.0.0.254/8 dev r6-eth2 broadcast 38.255.255.255
+
+r7 ip addr add 28.0.0.253/8 dev r7-eth0 broadcast 28.255.255.255
+r7 ip addr add 192.168.108.1/24 dev r7-eth1 broadcast 192.168.108.255
+r7 ip addr add 48.0.0.254/8 dev r7-eth2 broadcast 48.255.255.255
+
+r8 ip addr add 192.168.110.2/24 dev r8-eth0 broadcast 192.168.110.255
+r8 ip addr add 192.168.108.2/24 dev r8-eth1 broadcast 192.168.108.255
+r8 ip addr add 58.0.0.254/8 dev r8-eth2 broadcast 58.255.255.255
+
+h1 route add default gw 28.0.0.254
+h2 route add default gw 28.0.0.254
+h3 route add default gw 28.0.0.253
+h4 route add default gw 58.0.0.254
+h5 route add default gw 38.0.0.254
+h6 route add default gw 48.0.0.254
+
+r8 route add -net 28.0.0.0/8 gw 192.168.110.1
+
+r6 route add -net 48.0.0.0/8 gw 192.168.110.2
+r6 route add -net 58.0.0.0/8 gw 192.168.110.2
+
+r7 route add -net 38.0.0.0/8 gw 192.168.108.2
+r7 route add -net 58.0.0.0/8 gw 192.168.108.2
+
+r8 route add -net 38.0.0.0/8 gw 192.168.110.1
+r8 route add -net 48.0.0.0/8 gw 192.168.108.1
+
+r6 iptables -t nat -A PREROUTING -i r6-eth2 -p tcp --dport 122 -j DNAT --to-destination 28.0.0.1:22
+r6 iptables -t nat -A PREROUTING -i r6-eth2 -p tcp --dport 222 -j DNAT --to-destination 28.0.0.2:22
+r6 iptables -t nat -A PREROUTING -i r6-eth2 -p tcp --dport 322 -j DNAT --to-destination 28.0.0.3:22
+
+r6 iptables -A FORWARD -s 38.0.0.0/8 -d 28.0.0.0/8 -p tcp -j DROP
