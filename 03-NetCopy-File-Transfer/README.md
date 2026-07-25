@@ -19,16 +19,16 @@ The system demonstrates how multiple network services can cooperate to perform a
 ## Architecture
 
 ```
-+------------------+  TCP   +------------------+
-|  NetCopy Client  | -----> | NetCopy Server   |
-+------------------+        +------------------+
-          |
-          | TCP
-          | 
-          ▼
-+----------------------+
-|   Checksum Server    |
-+----------------------+
++----------------+  TCP   +----------------+
+| NetCopy Client | -----> | NetCopy Server |
++----------------+        +----------------+
+         |
+         | TCP
+         | 
+         ▼
++-----------------+
+| Checksum Server |
++-----------------+
 ```
 
 ### Workflow
