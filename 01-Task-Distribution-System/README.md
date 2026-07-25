@@ -14,12 +14,13 @@ A distributed task assignment system implemented in Python using both TCP and UD
 ## Architecture
 
 ```
-                TCP
-+---------+ <---------> +---------+
-| Client  |             | Server  |
+                
++---------+     TCP     +---------+
+| Client  | <---------> | Server  |
 +---------+             +---------+
                              |
                              | UDP
+                             |
                              v
                       +---------------+
                       | Archive Server|
