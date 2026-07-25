@@ -32,6 +32,19 @@ This project creates a virtual network using Mininet by defining hosts, switches
 ├── topology.py
 └── README.md
 ```
+## Configuration
+
+After launching the topology, the commands in `network_configuration.txt` can be executed within the Mininet CLI to configure the network.
+
+The configuration file includes:
+
+- IP address assignment
+- Default gateway configuration
+- Static routing
+- NAT port forwarding using `iptables`
+- Firewall rules for packet filtering
+
+This separates the topology definition from the network configuration, following a modular approach commonly used in network administration.
 
 ## Network Components
 
