@@ -15,14 +15,14 @@ A multiplayer client-server guessing game implemented in Python using TCP socket
 ## Architecture
 
 ```
-            TCP
-+---------+      +---------+
-| Client  | ---> |         |
-+---------+      |         |
-                 | Server  |
-+---------+ ---> |         |
-| Client  |      |         |
-+---------+      +---------+
+            
++--------+  TCP   +--------+
+| Client | -----> |        |
++--------+        |        |
+                  | Server |
++--------+        |        |
+| Client | -----> |        |
++--------+        +--------+
 ```
 
 ## Technologies
