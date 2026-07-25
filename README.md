@@ -6,7 +6,7 @@ A collection of networking projects developed as part of a university course on 
 
 ## Projects
 
-### 1. Task Distribution System
+### 1. [Task Distribution System](01-Task-Distribution-System)
 A distributed task assignment system consisting of a TCP server, TCP client, and UDP archive service. The server coordinates client requests and communicates with the archive service to retrieve tasks once predefined conditions are met.
 
 **Concepts**
